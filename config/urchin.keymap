@@ -25,8 +25,8 @@
     // Stackable mods that are consumed by the first following keypress.
     ignore-modifiers;
     quick-release;
-    // The QMK original never timed out; 5s is the safety net replacing its
-    // cancel-on-layer-key "panic button", which ZMK has no equivalent for.
+    // The QMK original never timed out; 5s is the safety net backing up the
+    // K_CANCEL panic key that replaces its cancel-on-layer-key.
     release-after-ms = <5000>;
 };
 
@@ -67,7 +67,7 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-            &kp ESC   &none     &none    &key_repeat &none            &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
+            &kp ESC   &none     &none    &key_repeat &kp K_CANCEL     &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
             &sk LCTRL &sk LALT  &sk LGUI &sk LSHIFT  &caps_word       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
             &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V)  &none            &bspc_del &kp TAB   &trans    &trans    &trans
                                 &trans &none                &trans &lng FNC LANG_SWITCH
