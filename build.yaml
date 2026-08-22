@@ -13,10 +13,16 @@
 #
 ---
 include:
+  # Daily driver. No Studio: the studio-rpc-usb-uart snippet keeps the USB
+  # stack alive and blocks deep sleep, which drains the central half.
+  - board: nice_nano_v2
+    shield: urchin_left
+  # Flash this one only while editing the keymap in Studio, then go back.
   - board: nice_nano_v2
     shield: urchin_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: urchin_left_studio
   - board: nice_nano_v2
     shield: urchin_right
   - board: nice_nano_v2
