@@ -11,6 +11,7 @@
 #define NAV  1
 #define NUM  2
 #define FNC  3
+#define SYS  4
 
 // The shortcut the lang key taps out, matching what macOS' Keyboard settings
 // have under "Select the next source in the Input menu".
@@ -78,22 +79,35 @@
             display-name = "Num";
             bindings = <
             &kp N1    &kp N2   &kp N3   &kp N4     &kp N5             &kp N6    &kp N7    &kp N8   &kp N9   &kp N0
-            &sk LCTRL &sk LALT &sk LGUI &sk LSHIFT &caps_word         &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp SQT
-            &none     &none    &none    &none      &none              &none     &none     &none    &kp BSLH &kp GRAVE
+            &sk LCTRL &sk LALT &sk LGUI &sk LSHIFT &none              &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp SQT
+            &none     &none    &none    &none      &none              &bspc_del &kp TAB   &none    &kp BSLH &kp GRAVE
                                &lng FNC LANG_SWITCH &trans            &none &trans
             >;
         };
 
         // Function & media, reached by holding both outer thumb keys.
-        // Bottom row doubles as the settings row: Bluetooth and bootloader
-        // (was a separate combo-activated layer in the stock firmware).
+        // The bottom-right key opens the SYS layer on top while held.
         fnc_layer {
             display-name = "Fn";
             bindings = <
             &kp F1       &kp F2       &kp F3       &kp F4       &kp F5              &kp F6     &kp F7         &kp F8    &kp F9       &kp F10
             &sk LCTRL    &sk LALT     &sk LGUI     &sk LSHIFT   &none               &kp F11    &kp F12        &kp C_PP  &kp C_VOL_DN &kp C_VOL_UP
-            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &bt BT_CLR &studio_unlock &none     &none        &bootloader
+            &none        &none        &none        &none        &none               &none      &none          &none     &none        &mo SYS
                                       &trans &none                &none &trans
+            >;
+        };
+
+        // Bluetooth and bootloader, deliberately three keys deep
+        // (NAV + lng + '/') so a slip on the Fn layer can't reach them.
+        // Momentary: release '/' and it's gone. The right pinky holds '/',
+        // so the right-hand keys sit by the inner edge.
+        sys_layer {
+            display-name = "Sys";
+            bindings = <
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &bt BT_CLR &studio_unlock &bootloader &none &none
+            &none        &none        &none        &none        &none               &none      &none          &none       &none &none
+            &none        &none        &none        &none        &none               &none      &none          &none       &none &trans
+                                      &none &none                &none &none
             >;
         };
     };

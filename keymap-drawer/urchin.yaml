@@ -51,7 +51,7 @@ layers:
   - {t: LALT, h: sticky}
   - {t: LGUI, h: sticky}
   - {t: LSHIFT, h: sticky}
-  - '&caps_word'
+  - ''
   - '-'
   - '='
   - '['
@@ -62,8 +62,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - {t: BSPC, s: DEL}
+  - TAB
   - ''
   - \
   - '`'
@@ -92,6 +92,21 @@ layers:
   - PP
   - VOL DN
   - VOL UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Sys
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  Sys:
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -99,9 +114,29 @@ layers:
   - {t: BT, h: '4'}
   - BT CLR
   - '&studio_unlock'
-  - ''
-  - ''
   - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
   - {type: held}
   - ''
   - ''
