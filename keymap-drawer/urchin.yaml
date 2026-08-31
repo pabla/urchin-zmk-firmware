@@ -51,7 +51,7 @@ layers:
   - {t: LALT, h: sticky}
   - {t: LGUI, h: sticky}
   - {t: LSHIFT, h: sticky}
-  - ''
+  - \
   - '-'
   - '='
   - '['
@@ -64,8 +64,8 @@ layers:
   - ''
   - {t: BSPC, s: DEL}
   - TAB
-  - ''
-  - \
+  - ','
+  - .
   - '`'
   - {t: Ctl+Alt+SPACE, h: Fn}
   - {t: ▽, type: trans}
