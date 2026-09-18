@@ -4,7 +4,7 @@ layers:
   Nav:
   - ESC
   - ''
-  - ''
+  - Ctl+Alt+SPACE
   - '&key_repeat'
   - CANCEL
   - HOME
