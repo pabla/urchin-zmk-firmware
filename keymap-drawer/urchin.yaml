@@ -35,7 +35,7 @@ layers:
   - {type: held}
   - ''
   - {t: ▽, type: trans}
-  - {t: Ctl+Alt+SPACE, h: Fn}
+  - {t: F18, h: Fn}
   Num:
   - '1'
   - '2'
@@ -67,7 +67,7 @@ layers:
   - ','
   - .
   - '`'
-  - {t: Ctl+Alt+SPACE, h: Fn}
+  - {t: F18, h: Fn}
   - {t: ▽, type: trans}
   - ''
   - {type: held}
