@@ -13,9 +13,10 @@
 #define FNC  3
 #define SYS  4
 
-// The shortcut the lang key taps out, matching what macOS' Keyboard settings
-// have under "Select the next source in the Input menu".
-#define LANG_SWITCH LC(LA(SPACE))
+// The key the lang key taps out, bound in macOS' Keyboard settings to "Select
+// the previous input source". A lone key with no mods: ZMK releases a chorded
+// shortcut like Ctrl+Opt+Space in one report, which macOS' switcher mishandles.
+#define LANG_SWITCH F18
 
 &caps_word {
     // Match QMK's caps word, which also survives Backspace and Delete.

@@ -19,7 +19,8 @@ always matches the firmware.
 - **Fn** — hold both outer thumb keys. F-row and media, plus the settings row at
   the bottom: Bluetooth profiles 1–5, `BT_CLR`, ZMK Studio unlock, bootloader.
 - Tapping the opposite thumb key of Nav/Num (the key that completes the Fn chord)
-  sends Ctrl+Alt+Space — the macOS "next input source" shortcut.
+  sends F18. Bind it in macOS under Keyboard Shortcuts → Input Sources →
+  "Select the previous input source".
 
 ## Building & flashing
 
