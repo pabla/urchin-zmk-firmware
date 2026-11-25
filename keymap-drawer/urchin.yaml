@@ -86,12 +86,12 @@ layers:
   - {t: LALT, h: sticky}
   - {t: LGUI, h: sticky}
   - {t: LSHIFT, h: sticky}
-  - ''
+  - Mac
   - F11
   - F12
-  - PP
-  - VOL DN
-  - VOL UP
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -137,6 +137,41 @@ layers:
   - ''
   - ''
   - {type: held}
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  Mac:
+  - BRI DN
+  - BRI UP
+  - AC DESKTOP SHOW ALL WINDOWS
+  - AC SEARCH
+  - VOICE COMMAND
+  - ''
+  - PREV
+  - PP
+  - NEXT
+  - MUTE
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - VOL DN
+  - VOL UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {type: held}
   - ''
   - ''
