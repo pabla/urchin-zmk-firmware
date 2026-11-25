@@ -12,6 +12,7 @@
 #define NUM  2
 #define FNC  3
 #define SYS  4
+#define MAC  5
 
 // The key the lang key taps out, bound in macOS' Keyboard settings to "Select
 // the previous input source". A lone key with no mods: ZMK releases a chorded
@@ -92,7 +93,7 @@
             display-name = "Fn";
             bindings = <
             &kp F1       &kp F2       &kp F3       &kp F4       &kp F5              &kp F6     &kp F7         &kp F8    &kp F9       &kp F10
-            &sk LCTRL    &sk LALT     &sk LGUI     &sk LSHIFT   &none               &kp F11    &kp F12        &kp C_PP  &kp C_VOL_DN &kp C_VOL_UP
+            &sk LCTRL    &sk LALT     &sk LGUI     &sk LSHIFT   &mo MAC             &kp F11    &kp F12        &none     &none        &none
             &none        &none        &none        &none        &none               &none      &none          &none     &none        &mo SYS
                                       &trans &none                &none &trans
             >;
@@ -109,6 +110,17 @@
             &none        &none        &none        &none        &none               &none      &none          &none       &none &none
             &none        &none        &none        &none        &none               &none      &none          &none       &none &trans
                                       &none &none                &none &none
+            >;
+        };
+
+        // Modern Apple top-row controls, entered by holding G on Fn.
+        mac_layer {
+            display-name = "Mac";
+            bindings = <
+            &kp C_BRI_DN &kp C_BRI_UP &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_AC_SEARCH &kp C_VOICE_COMMAND   &none &kp C_PREV &kp C_PP &kp C_NEXT &kp C_MUTE
+            &none        &none        &none                             &none         &trans            &kp C_VOL_DN &kp C_VOL_UP &none &none &none
+            &none        &none        &none                             &none         &none             &none &none &none &none &none
+                                      &trans &none                &none &trans
             >;
         };
     };
